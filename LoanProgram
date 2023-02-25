@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Farmer{
+    int principalAmount;
+    float time;
+    float simpleInterest;
+    float rate;
+    
+
+    void Customer()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please Mention the amount of loan you want:- ");
+        principalAmount = sc.nextInt();
+        System.out.print("Please Mention the time period:-");
+        time=sc.nextFloat();
+        rate=5f;
+    }
+
+    void Compute()
+    {
+        simpleInterest=(principalAmount*rate*time)/100f;
+        System.out.println("Your Simple Interest is :- "+simpleInterest);
+    }
+}
+
+public class LoanProgram{
+    public static void main(String[] args) {
+        Farmer Farmer1 =new Farmer();
+        Farmer1.Customer();
+        Farmer1.Compute();
+        Farmer Farmer2 =new Farmer();
+        Farmer2.Customer();
+        Farmer2.Compute();
+        
+    }
+} 
